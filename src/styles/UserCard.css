@@ -1,0 +1,92 @@
+/* UserCard.css */
+.user-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 300px;
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc(50% - 100px); /* Take up 50% of the width, minus some margin */
+}
+
+.user-card:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+/* User content to display image and name side by side */
+.user-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .user-card {
+    width: 100%; /* Full width for smaller screens */
+    flex-direction: row; /* Change layout to row for smaller screens */
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    flex-basis: auto;
+    height: 120px;
+    flex-grow: 1;
+  }
+
+  .user-content {
+    flex-direction: row; /* Ensure content stays in row */
+  }
+
+  .user-name {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .user-image {
+    width: 70px; /* Smaller width for image */
+    height: 70px; /* Smaller height for image */
+  }
+
+  .user-email {
+    display: none; /* Hide email on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    padding: 5px; /* Further reduced padding for very small screens */
+    flex-basis: auto;
+    height: 120px;
+    flex-grow: 1;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+}
